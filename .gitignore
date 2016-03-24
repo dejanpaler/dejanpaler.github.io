@@ -1,0 +1,7 @@
+### Jekyll template
+_site/
+.sass-cache/
+.jekyll-metadata
+
+## Directory-based project format:
+.idea/

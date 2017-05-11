@@ -1,8 +1,8 @@
 ### Welcome
-[https://dejanpaler.com]
+[Home](https://dejanpaler.com)
 
-[https://github.com/dejanpaler]
+[GitHub](https://github.com/dejanpaler)
 
-[https://www.linkedin.com/in/dejanpaler]
+[LinkedIn](https://www.linkedin.com/in/dejanpaler)
 
-[https://twitter.com/dejanpaler]
+[Twitter](https://twitter.com/dejanpaler)

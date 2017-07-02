@@ -1,8 +1,17 @@
-title: DejanPaler.GitHub.io
-description: 
-google_analytics: 
-show_downloads: true
+title: Dejan Paler
+description: > #
+google_analytics: UA-75884483-1
+url: "https://dejanpaler.com"
+twitter_username: dejanpaler
+github_username:  dejanpaler
+show_downloads: false
 theme: jekyll-theme-midnight
 
 gems:
   - jekyll-mentions
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+github: [metadata]

@@ -24,6 +24,9 @@
     --measure: 42rem;
     --tap-target: 1.5rem;
     --focus-width: 3px;
+    --space-nav: 0.5rem;
+    --font-size-header: 1rem;
+    --header-scroll-offset: 4.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,6 +106,8 @@ a:focus-visible {
     outline-offset: 2px;
 }
 
+.skip-link,
+.site-header a,
 .contact a,
 body > footer a,
 main > p > a,
@@ -146,9 +151,77 @@ body > footer {
     border-block-start: 1px solid var(--color-rule);
 }
 
+body > footer ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--space-m);
+}
+
+.skip-link {
+    position: absolute;
+    inset-block-start: var(--space-xs);
+    inset-inline-start: var(--space-gutter);
+    z-index: 2;
+    padding-inline: var(--space-s);
+    background-color: var(--color-background);
+    translate: 0 -200%;
+}
+
+.skip-link:focus {
+    translate: none;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-header);
+    padding-block: var(--space-xs);
+    padding-inline: max(var(--space-gutter), calc((100% - var(--measure)) / 2 + var(--space-gutter)));
+    background-color: var(--color-background);
+    border-block-end: 1px solid var(--color-rule);
+}
+
+.site-name {
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.site-header ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--space-nav);
+}
+
+@media (min-width: 24rem) {
+    .site-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: var(--space-s);
+    }
+}
+
+@media (min-height: 30rem) {
+    html {
+        scroll-padding-block-start: var(--header-scroll-offset);
+    }
+
+    .site-header {
+        position: sticky;
+        inset-block-start: 0;
+        z-index: 1;
+    }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     @view-transition {
         navigation: auto;
+    }
+
+    .site-header {
+        view-transition-name: site-header;
     }
 }
 

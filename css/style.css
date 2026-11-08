@@ -105,9 +105,14 @@ a:focus-visible {
 
 .contact a,
 body > footer a,
-main > p > a {
+main > p > a,
+.notice a {
     display: inline-block;
     min-block-size: var(--tap-target);
+}
+
+.contact {
+    overflow-wrap: anywhere;
 }
 
 .notice {

@@ -1,8 +1,3 @@
-### Jekyll template
-_site/
-.sass-cache/
-.jekyll-metadata
-
 ## Directory-based project format:
 .idea/
 /dejanpaler.github.io.iml
